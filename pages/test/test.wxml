@@ -1,0 +1,35 @@
+<view class="status-bar"></view>
+<view class="container">
+
+<!-- Progress Bar -->
+<view class="progress">
+  <view class="progress-inner" style="width: {{progress}}%"></view>
+</view>
+<text class="progress-text">{{current}} / {{total}}</text>
+
+<!-- Level Info -->
+<view class="level-info">
+  <text class="user-level">Your Level: {{levelName}}</text>
+  <text class="user-score {{vocabAnimating ? 'vocab-animate' : ''}}">{{vocabAnimating ? vocabDelta : '~' + vocabSize + ' words'}}</text>
+</view>
+
+<!-- Word Display -->
+<view class="word-box">
+  <text class="word">{{word_zh}}</text>
+  <text class="level-badge">Level: {{correctLevelName}}</text>
+</view>
+
+<!-- Answer Buttons (3 word options) -->
+<view class="options">
+  <button class="option-btn" data-index="0" bindtap="selectAnswer">{{options[0]}}</button>
+  <button class="option-btn" data-index="1" bindtap="selectAnswer">{{options[1]}}</button>
+  <button class="option-btn" data-index="2" bindtap="selectAnswer">{{options[2]}}</button>
+</view>
+
+<!-- Not Sure Button -->
+<button class="not-sure-btn" bindtap="selectNotSure">Not Sure</button>
+
+<!-- Exit Button -->
+<button class="exit-btn" bindtap="exitTest">Exit</button>
+
+</view>

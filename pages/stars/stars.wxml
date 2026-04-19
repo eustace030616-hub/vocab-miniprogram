@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="header">
+    <text class="title">Star Collection</text>
+    <text class="count">{{stars.length}} words</text>
+  </view>
+
+  <!-- Empty State -->
+  <view wx:if="{{isEmpty}}" class="empty-state">
+    <text class="empty-text">No words starred</text>
+    <text class="empty-hint">Go explore and collect words!</text>
+  </view>
+
+  <!-- Word List -->
+  <view wx:else class="word-list">
+    <view wx:for="{{stars}}" wx:key="word">
+      <view
+        class="word-item {{holdingIndex === index ? 'open' : ''}}"
+        bindtouchstart="onStart"
+        bindtouchend="onEnd"
+        bindtouchcancel="onEnd"
+        data-index="{{index}}"
+      >
+        <view class="word-main">
+          <text class="word-text">{{item.word}}</text>
+          <text class="remove-btn" data-word="{{item.word}}" catchtap="removeStar">✕</text>
+        </view>
+        <view class="expand-panel">
+          <text class="word-zh">{{item.word_zh || 'No translation'}}</text>
+          <text class="word-example">{{item.example || ''}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Back Button -->
+  <button class="back-btn" bindtap="onBack">Back</button>
+</view>

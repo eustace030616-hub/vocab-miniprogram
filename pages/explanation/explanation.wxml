@@ -1,0 +1,40 @@
+<view class="status-bar"></view>
+<view class="container">
+
+<!-- Result Banner -->
+<view class="result-banner {{isCorrect ? 'correct' : 'wrong'}}">
+  {{isCorrect ? '✓ Correct!' : (isNotSure ? '? Not Sure' : '✗ Wrong')}}
+</view>
+
+<!-- Points Earned -->
+<view class="points-section">
+  <text class="points-earned {{points >= 0 ? 'positive' : 'negative'}}">
+    {{points >= 0 ? '+' : ''}}{{points}} pts
+  </text>
+  <text class="total-points">Total: {{totalPoints}}</text>
+</view>
+
+<!-- Word -->
+<view class="word">{{word}}</view>
+
+<!-- Current Level -->
+<view class="level-section">
+  <text class="level-label">Your Level</text>
+  <text class="level-value">{{levelName}}</text>
+  <text class="level-score">{{levelScore.toFixed(1)}}</text>
+</view>
+
+<!-- Star Button -->
+<button class="star-btn {{isStarred ? 'collected' : ''}}" bindtap="toggleStar">
+  {{isStarred ? "⭐ Collected" : "☆ Collect Word"}}
+</button>
+
+<!-- Next Button -->
+<block wx:if="{{isLast}}">
+  <button class="finish-btn" data-action="finish" bindtap="nextQuestion">See Final Results</button>
+</block>
+<block wx:else>
+  <button class="next-btn" bindtap="nextQuestion">Next</button>
+</block>
+
+</view>

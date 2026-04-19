@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/userinfo/userinfo",
+    "pages/test/test",
+    "pages/explanation/explanation",
+    "pages/results/results",
+    "pages/stars/stars"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Word Test"
+  }
+}

@@ -1,0 +1,223 @@
+.status-bar {
+  width: 100%;
+  height: 65rpx;
+  background:#f5f5f5;
+}
+
+.container {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Result Banner */
+.result-banner {
+  width: 100%;
+  padding: 30rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+}
+
+.result-banner.correct {
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  color: white;
+}
+
+.result-banner.wrong {
+  background: linear-gradient(135deg, #f44336, #e57373);
+  color: white;
+}
+
+/* Points Section */
+.points-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.points-earned {
+  font-size: 48rpx;
+  font-weight: bold;
+}
+
+.points-earned.positive {
+  color: #4caf50;
+}
+
+.points-earned.negative {
+  color: #f44336;
+}
+
+.total-points {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 5rpx;
+}
+
+/* Type Badge */
+.type-badge {
+  padding: 8rpx 24rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.type-badge.curr {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.type-badge.plus1 {
+  background: #fff3e0;
+  color: #ff9800;
+}
+
+.type-badge.plus2 {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.type-badge.minus1 {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+/* Word */
+.word {
+  font-size: 60rpx;
+  font-weight: bold;
+  text-align: center;
+  padding: 40rpx 50rpx;
+  background: white;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+/* Level Change Banner */
+.level-change-banner {
+  width: 100%;
+  padding: 25rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+}
+
+.level-change-banner.up {
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  color: white;
+}
+
+.level-change-banner.down {
+  background: linear-gradient(135deg, #f44336, #e57373);
+  color: white;
+}
+
+.level-change-banner.stay {
+  background: #e0e0e0;
+  color: #666;
+}
+
+/* Batch Result */
+.batch-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  background: #fff3e0;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+  width: 100%;
+  font-size: 28rpx;
+  color: #666;
+}
+
+/* Level Section */
+.level-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx;
+  background: white;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  width: 100%;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.08);
+}
+
+.level-label {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 5rpx;
+}
+
+.level-value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #07c160;
+}
+
+.level-score {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 5rpx;
+}
+
+/* Star Button */
+.star-btn {
+  width: 80%;
+  margin: 15rpx 0;
+  background: white;
+  border: 2rpx solid #ffd700;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  color: #333;
+  padding: 20rpx;
+}
+
+.star-btn.collected {
+  background: #fff9e6;
+  border-color: #ffc107;
+  color: #ff9800;
+}
+
+/* Next Button */
+.next-btn {
+  width: 80%;
+  margin: 20rpx 0;
+  background: #07c160;
+  color: white;
+  border-radius: 12rpx;
+  font-size: 34rpx;
+  padding: 24rpx;
+}
+
+.next-btn:active {
+  background: #05964a;
+}
+
+/* Finish Button */
+.finish-btn {
+  width: 80%;
+  margin: 20rpx 0;
+  background: #2196f3;
+  color: white;
+  border-radius: 12rpx;
+  font-size: 34rpx;
+  padding: 24rpx;
+}
+
+.finish-btn:active {
+  background: #1976d2;
+}

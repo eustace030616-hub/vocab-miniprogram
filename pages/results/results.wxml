@@ -1,0 +1,49 @@
+<view class="container">
+
+<!-- Title -->
+<view class="title">Test Complete!</view>
+
+<!-- Score Display -->
+<view class="score-section">
+  <text class="score">{{correctCount}} / {{total}}</text>
+  <text class="score-label">Correct ({{correctRate}}%)</text>
+</view>
+
+<!-- Vocabulary Size Estimate -->
+<view class="points-section">
+  <text class="points">~{{vocabSize}}</text>
+  <text class="points-label">Vocabulary Size</text>
+</view>
+
+<!-- Level Display -->
+<view class="level-section">
+  <text class="level-label">Your Level</text>
+  <text class="level-name">{{levelName}}</text>
+  <text class="level-score">{{levelScore.toFixed(1)}}</text>
+</view>
+
+<!-- Weak Levels Warning -->
+<block wx:if="{{weakLevels.length > 0}}">
+  <view class="weak-levels">
+    <text class="weak-title">Need More Practice:</text>
+    <view class="weak-list">
+      <view class="weak-item" wx:for="{{weakLevels}}" wx:key="level">
+        <text class="weak-level">{{item.level}}</text>
+        <text class="weak-accuracy">{{item.accuracy}} accuracy</text>
+      </view>
+    </view>
+  </view>
+</block>
+
+<!-- Performance Message -->
+<view class="performance">
+  <text class="perf-text">{{performance}}</text>
+</view>
+
+<!-- Buttons -->
+<view class="buttons">
+  <button class="btn retry-btn" bindtap="onRetry">Try Again</button>
+  <button class="btn home-btn" bindtap="onHome">Home</button>
+</view>
+
+</view>

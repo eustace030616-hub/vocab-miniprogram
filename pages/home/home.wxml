@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="title">Word Test</view>
+
+  <!-- User Level Display -->
+  <view class="level-display">
+    <text class="level-score">{{vocabSize > 0 ? levelScore.toFixed(1) : '--'}}</text>
+    <text class="level-name">{{vocabSize > 0 ? levelName : ''}}</text>
+    <text class="points-text">{{vocabSize > 0 ? '~' + vocabSize + ' words' : 'No data yet'}}</text>
+  </view>
+
+  <button class="btn" bindtap="onQuickTest">Start Test</button>
+  <button class="btn btn-secondary" bindtap="onUserInfo">User Info</button>
+  <button class="btn btn-star" bindtap="onStarCollection">Star Collection</button>
+</view>

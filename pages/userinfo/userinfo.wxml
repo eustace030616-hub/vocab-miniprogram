@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="title">User Info</view>
+
+  <!-- Avatar Placeholder -->
+  <view class="avatar-container">
+    <view class="avatar">
+      <text class="avatar-text">{{levelName}}</text>
+    </view>
+  </view>
+
+  <!-- Level Display -->
+  <view class="level-display">
+    <text class="level-score">{{levelScore.toFixed(1)}}</text>
+    <text class="level-name">{{levelName}}</text>
+    <text class="stars-count">{{starsCount}} words collected</text>
+  </view>
+
+  <!-- Reset Options -->
+  <view class="reset-section">
+    <text class="reset-title">Reset Data</text>
+    <button class="btn-reset-all" bindtap="resetAll">Reset All</button>
+    <button class="btn-reset-level" bindtap="resetLevel">Reset Level Only</button>
+    <button class="btn-reset-stars" bindtap="resetStars">Reset Stars Only</button>
+  </view>
+
+  <!-- Back Button -->
+  <button class="btn-back" bindtap="onBack">Back</button>
+</view>
