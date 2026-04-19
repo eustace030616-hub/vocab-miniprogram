@@ -14,3 +14,9 @@ a vocabulary testing miniprogram with CEFR leveling system.
 - WeChat Dev Tool
 - Claude Code + MiniMax 2.7
 
+## future improvement
+
+- better estimation accuracy
+- better word bank
+- infinite mode implementation
+- engligh->german vocabulary estimation
